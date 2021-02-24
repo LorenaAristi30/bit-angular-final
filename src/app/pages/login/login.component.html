@@ -1,0 +1,25 @@
+<app-menu-login></app-menu-login>
+
+<article class="container pt-2">
+ <section class="card p-2">
+  <form
+    ngNativeValidate
+    (ngSubmit)="registrar()"
+  >
+    <section class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input  type="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+      <section *ngIf="userInfoValidator.email" id="emailHelp" class="form-text text-danger">Email no valido</section>
+    </section>
+    <section class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Password</label>
+      <input name= "password" type="password" class="form-control" id="exampleInputPassword1"> 
+      <section *ngIf="userInfoValidator.password" id="emailHelp" class="form-text text-danger">Por favor ingrese su contraseña</section>
+    </section>
+   
+    <button type="submit" class="btn btn-primary"><a routerLink="/index" ><img class="footer_item img-fluid" src="assets/icons/entrar.png" alt="img_login" /></a></button>
+  </form>
+ </section>
+</article>
+
+
